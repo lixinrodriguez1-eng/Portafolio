@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lizeth Rodríguez | Currículum</title>
+  <meta name="description" content="Currículum y portafolio de Lizeth Adela Rodríguez Padilla.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #f7f7fb;
+      --surface: #ffffff;
+      --text: #1d1d2b;
+      --muted: #5c5c70;
+      --accent: #6c4ce0;
+      --accent-soft: #ece7ff;
+      --border: #e4e4ee;
+      --shadow: 0 10px 30px rgba(30, 20, 80, 0.08);
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #12121a;
+        --surface: #1b1b26;
+        --text: #ececf4;
+        --muted: #a3a3b8;
+        --accent: #a48bff;
+        --accent-soft: #2a2442;
+        --border: #2c2c3a;
+        --shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+      }
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: "Inter", system-ui, -apple-system, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+    a { color: var(--accent); text-decoration: none; }
+    .container { max-width: 960px; margin: 0 auto; padding: 0 16px; }
+
+    /* Navegación */
+    nav {
+      position: sticky; top: 0; z-index: 10;
+      background: color-mix(in srgb, var(--bg) 85%, transparent);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid var(--border);
+    }
+    nav .container { display: flex; justify-content: space-between; align-items: center; height: 60px; }
+    nav .logo { font-weight: 700; color: var(--text); }
+    nav ul { display: flex; gap: 20px; list-style: none; }
+    nav ul a { color: var(--muted); font-size: 0.95rem; font-weight: 500; }
+    nav ul a:hover { color: var(--accent); }
+
+    /* Hero */
+    .hero { padding: 80px 0 60px; text-align: center; }
+    .avatar {
+      width: 120px; height: 120px; border-radius: 50%;
+      margin: 0 auto 24px;
+      background: linear-gradient(135deg, var(--accent), #e05fa8);
+      display: grid; place-items: center;
+      color: #fff; font-size: 2.5rem; font-weight: 700;
+      box-shadow: var(--shadow);
+    }
+    .hero h1 { font-size: clamp(2rem, 5vw, 3rem); line-height: 1.2; }
+    .hero .role { color: var(--accent); font-weight: 600; font-size: 1.15rem; margin-top: 8px; }
+    .hero p.summary { color: var(--muted); max-width: 600px; margin: 16px auto 0; }
+    .buttons { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; margin-top: 32px; }
+    .btn {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 12px 22px; border-radius: 999px;
+      font-weight: 600; font-size: 0.95rem;
+      transition: transform 0.15s ease, box-shadow 0.15s ease;
+    }
+    .btn:hover { transform: translateY(-2px); box-shadow: var(--shadow); }
+    .btn-primary { background: var(--accent); color: #fff; }
+    .btn-outline { border: 1.5px solid var(--border); color: var(--text); background: var(--surface); }
+    .btn svg { width: 18px; height: 18px; fill: currentColor; }
+
+    /* Secciones */
+    section { padding: 50px 0; }
+    section h2 { font-size: 1.6rem; margin-bottom: 24px; }
+    section h2::after {
+      content: ""; display: block; width: 48px; height: 4px;
+      background: var(--accent); border-radius: 2px; margin-top: 8px;
+    }
+    .card {
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: 16px; padding: 24px; box-shadow: var(--shadow);
+    }
+
+    /* Línea de tiempo */
+    .timeline { display: grid; gap: 16px; }
+    .timeline .card h3 { font-size: 1.1rem; }
+    .timeline .meta { color: var(--accent); font-size: 0.9rem; font-weight: 500; margin: 2px 0 8px; }
+    .timeline .card p { color: var(--muted); }
+
+    /* Habilidades */
+    .skills { display: flex; flex-wrap: wrap; gap: 10px; }
+    .skill {
+      background: var(--accent-soft); color: var(--accent);
+      padding: 8px 16px; border-radius: 999px; font-weight: 500; font-size: 0.95rem;
+    }
+
+    /* Proyectos */
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 16px; }
+    .grid .card h3 { margin-bottom: 8px; }
+    .grid .card p { color: var(--muted); margin-bottom: 12px; }
+
+    /* Contacto */
+    .contact { text-align: center; }
+    .contact p { color: var(--muted); margin-bottom: 8px; }
+
+    footer { text-align: center; padding: 30px 0; color: var(--muted); font-size: 0.9rem; border-top: 1px solid var(--border); }
+
+    @media (max-width: 600px) {
+      nav ul { gap: 12px; }
+      nav ul li.hide-sm { display: none; }
+      .hero { padding: 56px 0 40px; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="container">
+      <a href="#" class="logo">Lizeth R.</a>
+      <ul>
+        <li><a href="#sobre-mi">Sobre mí</a></li>
+        <li class="hide-sm"><a href="#experiencia">Experiencia</a></li>
+        <li><a href="#proyectos">Proyectos</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <div class="container">
+      <div class="avatar">LR</div>
+      <h1>Lizeth Adela Rodríguez Padilla</h1>
+      <p class="role">Estudiante de Tecnologías Web</p> <!-- EDITA: tu puesto o carrera -->
+      <p class="summary">
+        Apasionada por el desarrollo web y la tecnología. Me gusta crear sitios
+        modernos, accesibles y fáciles de usar. <!-- EDITA: tu resumen profesional -->
+      </p>
+      <div class="buttons">
+        <a class="btn btn-primary" href="https://www.linkedin.com/in/lizeth-adela-rodriguez-padilla-70501432b/" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg>
+          LinkedIn
+        </a>
+        
+        <a class="btn btn-outline" href="https://github.com/lixinrodriguez1-eng" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .3a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.4-1.8-1.4-1.8-1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.7-1.6-2.7-.3-5.5-1.3-5.5-6 0-1.2.5-2.3 1.3-3.1-.2-.4-.6-1.6.1-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C17.3 4.6 18.3 5 18.3 5c.7 1.6.2 2.8.1 3.2.8.8 1.3 1.9 1.3 3.1 0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .3"/></svg>
+          GitHub
+        </a>
+        <a class="btn btn-outline" href="#contacto">Contáctame</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+
+    <section id="sobre-mi">
+      <h2>Sobre mí</h2>
+      <div class="card">
+        <p>
+          <!-- EDITA: escribe un párrafo sobre ti -->
+          Soy estudiante con interés en el desarrollo web, redes y sistemas. Disfruto aprender
+          nuevas herramientas, trabajar en equipo y resolver problemas. Busco oportunidades
+          para aplicar mis conocimientos y seguir creciendo profesionalmente.
+        </p>
+      </div>
+    </section>
+
+    <section id="experiencia">
+      <h2>Formación y experiencia</h2>
+      <div class="timeline">
+        <!-- EDITA: agrega o quita tarjetas según tu historial -->
+        <div class="card">
+          <h3>Carrera / Ingeniería en ...</h3>
+          <p class="meta">Nombre de la institución · 2023 – Actualidad</p>
+          <p>Materias destacadas: Tecnologías Web, Programación, Redes de Computadoras.</p>
+        </div>
+        <div class="card">
+          <h3>Puesto o práctica profesional</h3>
+          <p class="meta">Empresa · Año – Año</p>
+          <p>Describe brevemente tus responsabilidades y logros.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="habilidades">
+      <h2>Habilidades</h2>
+      <div class="skills">
+        <!-- EDITA: tus habilidades -->
+        <span class="skill">HTML</span>
+        <span class="skill">CSS</span>
+        <span class="skill">JavaScript</span>
+        <span class="skill">Git y GitHub</span>
+        <span class="skill">Programación</span>
+        <span class="skill">Cisco Packet Tracer</span>
+        <span class="skill">Trabajo en equipo</span>
+        <span class="skill">Comunicación</span>
+      </div>
+    </section>
+
+    <section id="proyectos">
+      <h2>Proyectos</h2>
+      <div class="grid">
+        <!-- EDITA: tus proyectos -->
+        <div class="card">
+          <h3>Landing de currículum</h3>
+          <p>Esta página: sitio personal responsivo hecho con HTML y CSS, publicado en GitHub Pages.</p>
+          <a href="https://github.com/lixinrodriguez1-eng" target="_blank" rel="noopener">Ver código →</a>
+        </div>
+        <div class="card">
+          <h3>Proyecto 2</h3>
+          <p>Descripción corta del proyecto y tecnologías usadas.</p>
+          <a href="#" target="_blank" rel="noopener">Ver proyecto →</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="contacto" class="contact">
+      <h2 style="display:inline-block">Contacto</h2>
+      <p>¿Te interesa mi perfil? ¡Hablemos!</p>
+      <div class="buttons">
+        <a class="btn btn-primary" href="https://www.linkedin.com/in/lizeth-adela-rodriguez-padilla-70501432b/" target="_blank" rel="noopener">Escríbeme en LinkedIn</a>
+        <!-- EDITA (opcional): pon tu correo -->
+        <a class="btn btn-outline" href="mailto:tu-correo@ejemplo.com">Enviar correo</a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    © <span id="year"></span> Lizeth Adela Rodríguez Padilla
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
